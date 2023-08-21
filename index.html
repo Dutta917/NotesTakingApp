@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotesApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cf684ac137.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>IMp NOtes.</h1>
+        <ul class="nav-list">
+            <li class="nav-itm hover-lnk" onclick="insertNote()"><i class="createnote fa-sharp fa-solid fa-notes-medical"></i></li>
+            <li class="nav-itm hover-lnk" onclick="AllNotesSaved()"><i class="createnote fa-solid fa-circle-check"></i></li>
+            <li class="nav-itm hover-lnk" onclick="DeleteAll()"><i class="createnote fa-solid fa-trash"></i></li>
+        </ul>
+    </header>
+    <main id="boxNote" class="flex">
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body{
+    background-color: #333;
+}
+.container{
+    margin-inline:auto;
+}
+header{
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(244, 152, 6);
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    padding-left:40px;
+    animation: linear 6s infinite;
+    animation-name: colorchng;
+    cursor: pointer;
+}
+@keyframes colorchng {
+    0%,100%{
+        color:white;  
+    }
+    15%{
+        color:blue;
+        transform: scale(1.5);
+        transform:translateX(20px);
+    }
+    30%{
+        color:green;
+        transform:translateX(35px);
+    }
+    45%{
+        color:red;
+        transform: scale(1.7);
+        transform:translateX(25px);
+    }
+    60%{
+        color:black;
+        transform:translateX(50px);
+    }
+    75%{
+        color:royalblue;
+        transform:scale(1.2)
+        
+    }
+}
+.nav-list{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis:30%;
+    list-style-type: none;
+    font-weight: 600;
+}
+.createnote{
+    font-size: 2rem;
+}
+.hover-lnk{
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    width: 94px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    border-radius: 50%;
+}
+.createnote:active{
+    transform:scale(1.2);
+    color:green;
+}
+.hover-lnk:hover{
+    color:black;
+}
+main{
+    height:100vh;
+    width:90vw;
+    margin-inline:auto;
+    background-color: cyan;
+}
+.writeDesk{
+    height:90%;
+    width:99%;
+}
+.flex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.CreateNote{
+    width:260px;
+    height: fit-content;
+    margin-top:40px;
+    background-color: black;
+    justify-content: center;
+    border-radius:10px;
+}
+.CreateNote:hover{
+    box-shadow: 5px 5px 10px black;
+    border:1px solid cyan;
+}
+.box{
+    background-color: black;
+}
+.edit{
+    position: relative;
+    right:-160px;
+    top: 20px;
+    font-size:1.7rem;
+    color: rgb(101, 246, 101);
+    z-index: 99;
+    cursor: pointer;
+}
+.edit:active{
+    color: black;
+}
+.delete{
+    position: relative;
+    right:-206px;
+    top:-15px;
+    font-size:1.7rem;
+    color:red;
+    z-index: 99;
+    cursor: pointer;
+}
+.edit:hover, .delete:hover{
+    color:white;
+}
+.delete:active{
+    color:black;
+}
+.TextArea, .Text{
+    position:relative;
+    outline:none;
+    border-color:transparent;
+    background-color: white;
+    border-radius:5px;
+    font-weight: 700;
+}
+.TextArea:focus{
+    outline:none;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.box div:last-child{
+    margin-bottom:20px;
+}
+
+/* handelling The small Screen */
+@media screen and (max-width:1024px) {
+    .nav-list{
+        flex-wrap:wrap;
+    }
+    header{
+        height:10vh;
+    }
+    .hover-lnk{
+        height: 25px;
+        width:40px;
+        border-radius:5px;
+        overflow:hidden;
+    }
+    .createnote{
+        font-size: 1rem;
+    }
+    .nav-list{
+        flex-basis:70%;
+        padding-right:30px;
+        gap:10px;
+    }
+    header h1{
+        font-size:1.3rem;
+        animation:none;
+        flex-basis:25%;
+    }
+}
+@media  screen and (max-width:640px) {
+    .nav-list{
+        flex-wrap:wrap;
+    }
+    header{
+        height:10vh;
+    }
+    .hover-lnk{
+        height: 25px;
+        width:40px;
+        border-radius:5px;
+        overflow:hidden;
+    }
+    .createnote{
+        font-size: 1rem;
+    }
+    .nav-list{
+        flex-basis:70%;
+        padding-right:30px;
+        gap:10px;
+    }
+    header h1{
+        font-size:1.3rem;
+        animation:none;
+        flex-basis:25%;
+    }
+}
